@@ -39,9 +39,8 @@ class SizeFragment : Fragment() {
 
                     // Inform parent about slider event with updated value
                     //(requireActivity() as ValueChangeInterface).onChange(progress)
-                    textSizeViewModel.getText().observe(requireActivity()) {
-                        textSizeViewModel.setText(progress)
-                    }
+                    textSizeViewModel.setText(progress.toFloat())
+
                 }
                 override fun onStartTrackingTouch(p0: SeekBar?) {}
                 override fun onStopTrackingTouch(p0: SeekBar?) {}

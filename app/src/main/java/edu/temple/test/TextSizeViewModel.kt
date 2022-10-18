@@ -5,17 +5,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class TextSizeViewModel : ViewModel() {
-    private val textSize : MutableLiveData<Int> by lazy {
-        MutableLiveData<Int>()
+    private val textSize : MutableLiveData<Float> by lazy {
+        MutableLiveData<Float>()
     }
 
-    fun getText() : LiveData<Int> {
+    fun getText() : LiveData<Float> {
         return textSize
     }
 
-    fun setText(size: Int) {
+    fun setText(size: Float) {
         textSize.value = size
     }
-
-
 }
